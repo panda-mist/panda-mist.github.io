@@ -9,7 +9,7 @@ redirect_from:
 
 I'm a third year master student from [School of ME](https://me.sjtu.edu.cn/en/), [Shanghai Jiao Tong University](https://en.sjtu.edu.cn/news). My research interest includes Robotics, Mechatronics, Bionic mechanism, Agricultural machinery, and Machine vision.
 
-You can find my CV here: [Hao Zhang's Curriculum Vitae](../assets/Hao Zhang_Resume.pdf).
+You can find my CV here: [Hao Zhang's Curriculum Vitae](..assets/HaoZhang_Resume.pdf).
 
 [Email](mailto:2545080736@sjtu.edu.cn)
 
