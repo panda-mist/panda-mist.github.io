@@ -15,6 +15,6 @@ You can find my CV here: [Hao Zhang's Curriculum Vitae](..assets/HaoZhang_Resume
 
 Who am I ?
 ======
-· Possessing exceptional expertise in mechanical and mechatronic design: [Projects](https://academicpages.github.io/projects/)  
+· Possessing exceptional expertise in mechanical and mechatronic design: [Portfolio](https://academicpages.github.io/projects/)  
 · Demonstrating a strong passion for hands-on skills: [Artwares](https://academicpages.github.io/artwares/)  
 · The unquenchable fire of the quest for the unknown & immense world: [Scenery](https://academicpages.github.io/scenery/)
