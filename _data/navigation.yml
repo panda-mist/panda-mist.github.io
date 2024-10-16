@@ -9,8 +9,9 @@ main:
   - title: "Portfolio"
     url: /portfolio/  
 
-  - title: "Artwares"
-    url: /artwares/    
+#  - title: "Artwares"
+#    url: /artwares/    
 
-  - title: "Scenery"
-    url: /scenery/   
+#  - title: "Scenery"
+#    url: /scenery/   
+
