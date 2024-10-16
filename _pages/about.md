@@ -16,5 +16,5 @@ You can find my CV here: [Hao Zhang's Curriculum Vitae](../assets/HaoZhang_Resum
 Who am I ?
 ======
 · Possessing exceptional expertise in mechanical and mechatronic design: [Portfolio](https://panda-mist.github.io/portfolio/)  
-· Demonstrating a strong passion for hands-on skills  # : [Artwares](https://panda-mist.github.io/artwares/)  
-· The unquenchable fire of the quest for the unknown & immense world  # : [Scenery](https://apanda-mist.github.io/scenery/)
+· Demonstrating a strong passion for hands-on skills;
+· The unquenchable fire of the quest for the unknown & immense world;
