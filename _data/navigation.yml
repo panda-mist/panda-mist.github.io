@@ -7,11 +7,13 @@
 main: 
     
   - title: "Portfolio"
-    url: /portfolio/  
+    url: /portfolio/
+
+  - title: "芒种团队 · Mangzhong"
+    url: /mangzhong/
 
 #  - title: "Artwares"
 #    url: /artwares/    
 
 #  - title: "Scenery"
-#    url: /scenery/   
-
+#    url: /scenery/

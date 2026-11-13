@@ -1,0 +1,13 @@
+
+.mz-index { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: 1rem 0 1.25rem; font-size: .85em; }
+.mz-figure { display: block; width: 100%; margin: 0 0 1.1em; }
+.mz-figure img { display: block; width: 100%; height: auto; margin: 0; }
+.mz-figure figcaption { margin: .4em 0 0; color: #49555a; font-size: .77em; line-height: 1.5; text-align: left; }
+.mz-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; }
+.mz-grid .mz-figure { margin: 0 0 .4rem; }
+.mz-grid .mz-figure img { height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.mz-awards .mz-figure img { aspect-ratio: 4 / 3; object-fit: contain; background: #f6f6f3; }
+.mz-grid .mz-figure h3 { margin: .55em 0 .3em; font-size: 1em; }
+.mz-grid .mz-figure p { margin: .2em 0; font-size: .84em; line-height: 1.5; }
+.mz-video { width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; }
+@media (max-width: 620px) { .mz-grid { grid-template-columns: 1fr; } }
