@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-浏览网站页面、项目和文章 · Browse the pages, projects and posts. [全站 XML 索引 · XML sitemap]({{ base_path }}/sitemap.xml)
+在这里找项目、文章和站内页面 · Browse the pages, projects and posts. [网站索引（XML）· XML sitemap]({{ base_path }}/sitemap.xml)
 
 <h2>页面 · Pages</h2>
 {% for post in site.pages %}
