@@ -1,23 +1,15 @@
-{% include base_path %}
-
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button type="button" aria-label="导航菜单 · Navigation menu"><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-              {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
+<header class="folio-masthead">
+  <div class="site-frame folio-masthead-inner">
+    <a class="folio-signature" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>
+      <span lang="zh-CN">张昊</span><span lang="en">Hao Zhang</span>
+    </a>
+    <nav aria-label="主导航 · Main navigation" class="folio-nav">
+      {% for link in site.data.navigation.main %}
+        {% assign names = link.title | split: ' · ' %}
+        <a href="{{ link.url | relative_url }}"{% if link.url == page.url %} aria-current="page"{% elsif link.url == '/portfolio/' and page.collection == 'portfolio' %} aria-current="location"{% endif %}>
+          <span lang="zh-CN">{{ names | first | escape }}</span>{% if names.size > 1 %}<span lang="en">{{ names | last | escape }}</span>{% endif %}
+        </a>
+      {% endfor %}
+    </nav>
   </div>
-</div>
+</header>

@@ -18,4 +18,8 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css?v={{ site.time | date: '%s' }}">
 
+<link rel="stylesheet" media="screen" href="{{ '/assets/css/field-notes.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+{% if page.url == '/' %}<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}?v={{ site.time | date: '%s' }}">{% endif %}
+{% if page.url == '/portfolio/' or page.collection == 'portfolio' %}<link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}?v={{ site.time | date: '%s' }}">{% endif %}
+
 <meta http-equiv="cleartype" content="on">

@@ -1,0 +1,2 @@
+{% assign folio_names = page.title | split: ' · ' %}
+<h1 class="page__title folio-title" itemprop="headline"><span lang="zh-CN">{{ folio_names | first | escape }}</span>{% if folio_names.size > 1 %}<small lang="en">{{ folio_names | last | escape }}</small>{% endif %}</h1>

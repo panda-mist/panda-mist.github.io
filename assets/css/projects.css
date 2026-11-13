@@ -1,0 +1,215 @@
+/* Portfolio index */
+.portfolio-index {
+  width: 100%;
+  min-width: 0;
+  container-type: inline-size;
+}
+.portfolio-index .project-group + .project-group { margin-top: clamp(2.8rem, 6vw, 5rem); }
+.portfolio-index .project-group__title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: .85rem;
+  row-gap: .15rem;
+  margin: 0 0 1.3rem;
+  padding: 1rem 0 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+}
+.project-group__title [lang="zh-CN"] {
+  font: 600 clamp(1.2rem, 2.3vw, 1.55rem)/1.45 var(--serif);
+}
+.project-group__title [lang="en"] {
+  color: var(--green);
+  font-size: .83rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.project-index-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
+.project-index-grid--featured { gap: 2.1rem 1.15rem; }
+.project-index-grid--archive { column-gap: 1.65rem; }
+.project-entry,
+.project-entry__copy { min-width: 0; }
+.portfolio-index .project-entry__link {
+  display: block;
+  color: var(--ink);
+  border: 0;
+  text-decoration: none;
+}
+.portfolio-index .project-entry__link:hover,
+.portfolio-index .project-entry__link:focus-visible { text-decoration: none; }
+.portfolio-index .project-entry__link:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 5px;
+}
+.project-entry__media {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: transparent;
+}
+.portfolio-index .project-entry__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: contain;
+}
+.portfolio-index .project-entry__media--field-photo img { object-fit: cover; }
+.portfolio-index .project-entry__name {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.project-entry__name [lang] { display: block; }
+.project-entry__name [lang="zh-CN"] {
+  color: var(--ink);
+  font: 600 clamp(1.05rem, 1.65vw, 1.3rem)/1.45 var(--serif);
+}
+.project-entry__name [lang="en"] {
+  margin-top: .25rem;
+  color: var(--green);
+  font-size: .86rem;
+  font-weight: 500;
+  line-height: 1.38;
+}
+.project-entry__link:is(:hover, :focus-visible) .project-entry__name [lang="zh-CN"] {
+  color: var(--green);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .22em;
+}
+.portfolio-index .project-entry__copy p {
+  margin: .55rem 0 0;
+  color: var(--ink);
+  font-size: .9rem;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+.portfolio-index .project-entry__copy p[lang="en"] {
+  margin-top: .35rem;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.52;
+}
+.project-index-grid--featured .project-entry__media { margin-bottom: .85rem; }
+.project-index-grid--archive .project-entry {
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+.project-index-grid--archive .project-entry__link:not(.project-entry__link--text) {
+  display: grid;
+  grid-template-columns: clamp(4.75rem, 24%, 7.5rem) minmax(0, 1fr);
+  align-items: start;
+  gap: .85rem;
+}
+.project-index-grid--archive .project-entry__media { aspect-ratio: 4 / 3; }
+.project-index-grid--archive .project-entry__name [lang="zh-CN"] { font-size: 1.02rem; }
+.project-index-grid--archive .project-entry__copy p { font-size: .85rem; }
+.project-index-grid--archive .project-entry__copy p[lang="en"] { font-size: .8rem; }
+
+@container (min-width: 39rem) {
+  .project-index-grid--featured { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@container (min-width: 48rem) {
+  .project-index-grid--archive { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Project documents */
+.project-detail .project-detail__title {
+  margin: 0 0 1.25rem;
+  color: var(--ink);
+}
+.project-detail__title [lang],
+.project-detail .page__content h2 [lang],
+.project-detail .page__content h3 [lang] { display: block; }
+.project-detail__title [lang="zh-CN"] {
+  overflow-wrap: anywhere;
+  font: 600 clamp(1.9rem, 3.3vw, 3rem)/1.2 var(--serif);
+}
+.project-detail__title [lang="en"] {
+  margin-top: .55rem;
+  color: var(--green);
+  font: 400 clamp(1.05rem, 2.1vw, 1.45rem)/1.35 var(--serif);
+}
+.project-detail .page__content {
+  min-width: 0;
+  container-type: inline-size;
+}
+.project-detail .project-meta em,
+.project-detail figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .2rem;
+  font-style: normal;
+}
+.project-detail .project-meta em { color: var(--green); }
+.project-detail .project-meta span[aria-hidden],
+.project-detail figcaption span[aria-hidden] { display: none; }
+.project-detail .project-bilingual {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: .45rem 1.7rem;
+  margin-bottom: 1.4rem;
+}
+.project-detail .project-bilingual > p {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: break-word;
+  text-indent: 0;
+}
+.project-detail .project-bilingual > [lang="zh-CN"],
+.project-detail .project-meta [lang="zh-CN"],
+.project-detail figcaption [lang="zh-CN"] { order: -1; }
+.project-detail .project-bilingual > [lang="zh-CN"] { color: var(--ink); line-height: 1.85; }
+.project-detail .project-bilingual > [lang="en"] { color: var(--muted); font-size: .92rem; line-height: 1.65; }
+.project-detail .project-meta [lang="en"],
+.project-detail figcaption [lang="en"] { color: var(--muted); font-size: .87em; }
+.project-detail .page__content h2,
+.project-detail .page__content h3 {
+  margin: 1.8rem 0 .75rem;
+  border-bottom: 0;
+  padding-bottom: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  letter-spacing: normal;
+  text-transform: none;
+}
+.project-detail .page__content h2 [lang="en"],
+.project-detail .page__content h3 [lang="en"] {
+  margin-top: .2rem;
+  color: var(--green);
+  font-size: .73em;
+  font-weight: 400;
+}
+.project-detail .page__content figure { display: block; margin: 1.3rem 0 2rem; }
+.project-detail .page__content figure img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 75vh;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.project-detail .page__content figcaption {
+  margin-top: .58rem;
+  color: var(--ink);
+  font-size: .85rem;
+  line-height: 1.5;
+  text-align: start;
+}
+@container (min-width: 42rem) {
+  .project-detail .project-bilingual { grid-template-columns: minmax(0, 1.04fr) minmax(0, 1fr); }
+}

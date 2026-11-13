@@ -7,12 +7,6 @@
 html {
   /* apply a natural box layout model to all elements */
   box-sizing: border-box;
-  /* background-color: $background-color; */
-   background-image: url(https://panda-mist.github.io/images/background.png);
-   background-size: 100%;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-position: center;
   font-size: 20px;
 
   @include breakpoint($medium) {

@@ -1,13 +1,22 @@
 {% assign item = include.project %}
-<article class="mz-project-card{% unless item.cover %} mz-project-card--text{% endunless %}">
-  {% if item.cover %}
-  <a class="mz-cover" href="{{ item.url | relative_url }}" aria-label="{{ item.title | escape }}">
-    <img src="{{ item.cover | relative_url }}" alt="{{ item.cover_alt | escape }}"{% unless item.mz_order == 1 %} loading="lazy"{% endunless %}>
+{% assign names = item.title | split: ' · ' %}
+{% assign title_zh = item.title_zh | default: names[1] %}
+{% assign title_en = item.title_en | default: names[0] %}
+{% assign heading_id = item.url | replace: '/', '-' | prepend: 'project' %}
+<article class="project-entry">
+  <a class="project-entry__link{% unless item.cover %} project-entry__link--text{% endunless %}" href="{{ item.url | relative_url }}" aria-labelledby="{{ heading_id }}">
+    {% if item.cover %}
+      <div class="project-entry__media{% if item.mz_order == 1 or item.mz_order == 2 %} project-entry__media--field-photo{% endif %}">
+        <img src="{{ item.cover | relative_url }}" alt="{{ item.cover_alt | escape }}"{% unless item.mz_order == 1 %} loading="lazy"{% endunless %} decoding="async">
+      </div>
+    {% endif %}
+    <div class="project-entry__copy">
+      <h3 id="{{ heading_id }}" class="project-entry__name">
+        {% if title_zh %}<span lang="zh-CN">{{ title_zh | escape }}</span>{% endif %}
+        {% if title_en %}<span lang="en">{{ title_en | escape }}</span>{% endif %}
+      </h3>
+      {% if item.excerpt_zh %}<p lang="zh-CN">{{ item.excerpt_zh | escape }}</p>{% endif %}
+      {% if item.excerpt_en %}<p lang="en">{{ item.excerpt_en | escape }}</p>{% endif %}
+    </div>
   </a>
-  {% endif %}
-  <div>
-    <h3><a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></h3>
-    <p lang="zh-CN">{{ item.excerpt_zh | escape }}</p>
-    <p lang="en">{{ item.excerpt_en | escape }}</p>
-  </div>
 </article>

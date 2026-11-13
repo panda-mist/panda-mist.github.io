@@ -5,19 +5,31 @@ permalink: /portfolio/
 author_profile: true
 ---
 
-<h2 class="archive__subtitle">从沙地到农田 · Field robotics</h2>
-<div class="mz-project-list">
-  {% assign field_projects = site.portfolio | where_exp: 'project', 'project.mz_order' | sort: 'mz_order' %}
-  {% for project in field_projects %}
-    {% include mz-project-card.html project=project %}
-  {% endfor %}
-</div>
+<div class="portfolio-index">
+  <section class="project-group" aria-labelledby="field-robotics">
+    <h2 id="field-robotics" class="project-group__title">
+      <span lang="zh-CN">从沙地到农田</span>
+      <span lang="en">Field robotics</span>
+    </h2>
+    <div class="project-index-grid project-index-grid--featured">
+      {% assign field_projects = site.portfolio | where_exp: 'project', 'project.mz_order' | sort: 'mz_order' %}
+      {% for project in field_projects %}
+        {% include mz-project-card.html project=project %}
+      {% endfor %}
+    </div>
+  </section>
 
-<h2 class="archive__subtitle">以往的设计与实践 · Earlier projects and activities</h2>
-<div class="mz-project-list">
-  {% for project in site.portfolio %}
-    {% unless project.mz_order %}
-      {% include mz-project-card.html project=project %}
-    {% endunless %}
-  {% endfor %}
+  <section class="project-group" aria-labelledby="earlier-projects">
+    <h2 id="earlier-projects" class="project-group__title">
+      <span lang="zh-CN">以往的设计与实践</span>
+      <span lang="en">Earlier projects and activities</span>
+    </h2>
+    <div class="project-index-grid project-index-grid--archive">
+      {% for project in site.portfolio %}
+        {% unless project.mz_order %}
+          {% include mz-project-card.html project=project %}
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </section>
 </div>
