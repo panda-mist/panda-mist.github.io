@@ -14,6 +14,6 @@ redirect_from:
 </div>
 
 <ul>
-  <li><a lang="zh-CN" href="{{ '/assets/HaoZhang_Resume_ZH.pdf' | relative_url }}?v=20261114">下载中文简历（PDF）</a></li>
-  <li><a lang="en" href="{{ '/assets/HaoZhang_Resume.pdf' | relative_url }}?v=20261114">Download my CV in English (PDF)</a></li>
+  <li><a lang="zh-CN" href="{{ '/assets/HaoZhang_Resume_ZH.pdf' | relative_url }}?v=20261114-2">下载中文简历（PDF）</a></li>
+  <li><a lang="en" href="{{ '/assets/HaoZhang_Resume.pdf' | relative_url }}?v=20261114-2">Download my CV in English (PDF)</a></li>
 </ul>

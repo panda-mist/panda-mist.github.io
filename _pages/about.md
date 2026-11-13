@@ -30,8 +30,8 @@ redirect_from:
     </div>
     <nav class="profile-actions" aria-label="项目与简历 · Projects and CVs">
       <a class="profile-cv-link profile-project-link" href="{{ '/portfolio/' | relative_url }}"><span lang="zh-CN">我的项目</span> <small lang="en">Projects ↗</small></a>
-      <a class="profile-cv-link" href="{{ '/assets/HaoZhang_Resume_ZH.pdf' | relative_url }}?v=20261114" type="application/pdf" hreflang="zh-CN"><span lang="zh-CN">中文简历</span> <small lang="en">PDF</small></a>
-      <a class="profile-cv-link" href="{{ '/assets/HaoZhang_Resume.pdf' | relative_url }}?v=20261114" type="application/pdf" hreflang="en"><span lang="en">English CV</span> <small lang="en">PDF</small></a>
+      <a class="profile-cv-link" href="{{ '/assets/HaoZhang_Resume_ZH.pdf' | relative_url }}?v=20261114-2" type="application/pdf" hreflang="zh-CN"><span lang="zh-CN">中文简历</span> <small lang="en">PDF</small></a>
+      <a class="profile-cv-link" href="{{ '/assets/HaoZhang_Resume.pdf' | relative_url }}?v=20261114-2" type="application/pdf" hreflang="en"><span lang="en">English CV</span> <small lang="en">PDF</small></a>
     </nav>
   </div>
   <figure class="profile-hero-figure">
