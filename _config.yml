@@ -26,7 +26,11 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "做治沙和农业机器人 · Field robotics for ecological restoration and agriculture"
   location         : "中国上海 · Shanghai, China"
-  employer         : "上海芒智种科技 · Shanghai Mangzhizhong Technology" 
+  affiliations:
+    - zh: "上海交通大学内蒙古研究院"
+      en: "Shanghai Jiao Tong University Inner Mongolia Research Institute"
+    - zh: "上海芒智种科技有限责任公司"
+      en: "Shanghai Mangzhizhong Technology Co., Ltd."
   uri              : # URL
   email            : "2545080736@sjtu.edu.cn" 
 

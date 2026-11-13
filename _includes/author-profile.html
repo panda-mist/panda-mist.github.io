@@ -21,20 +21,26 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">联系 · Contact</button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
-        <li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
+        <li class="author-contact"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>{{ author.location | escape }}</span></li>
       {% endif %}
-      {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
+      {% if author.affiliations %}
+        {% for institution in author.affiliations %}
+          <li class="author-contact author-affiliation" itemprop="affiliation" itemscope itemtype="https://schema.org/Organization">
+            <i class="fas fa-fw fa-building-columns" aria-hidden="true"></i>
+            <span><span lang="zh-CN" itemprop="name">{{ institution.zh | escape }}</span><span lang="en" itemprop="alternateName">{{ institution.en | escape }}</span></span>
+          </li>
+        {% endfor %}
+      {% elsif author.employer %}
+        <li class="author-contact"><i class="fas fa-fw fa-building-columns" aria-hidden="true"></i><span>{{ author.employer | escape }}</span></li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
       {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
+        <li class="author-email"><a class="author-contact" itemprop="email" href="mailto:{{ author.email | escape }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span>{{ author.email | escape }}</span></a></li>
       {% endif %}
 
       <!-- Font Awesome and Academicons icons / Academic websites -->

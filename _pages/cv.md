@@ -1,64 +1,19 @@
 ---
 layout: archive
-title: "CV"
+title: "个人简历 · CV"
 permalink: /cv/
 author_profile: true
+excerpt: "我是张昊，在上海交大学习机械工程和能源动力，现从事生态修复机器人研发。 I design robots for ecological restoration."
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+<div class="project-bilingual">
+  <p lang="zh-CN">我在上海交通大学完成机械工程本科和能源动力硕士学习。我在简历中整理了自己的机器人研发、工程实践和获奖经历。</p>
+  <p lang="en">I studied mechanical engineering and energy and power engineering at Shanghai Jiao Tong University. My CV covers my work in robotics, engineering projects and awards.</p>
+</div>
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
-
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+<ul>
+  <li><a lang="zh-CN" href="{{ '/assets/HaoZhang_Resume_ZH.pdf' | relative_url }}?v=20261114">下载中文简历（PDF）</a></li>
+  <li><a lang="en" href="{{ '/assets/HaoZhang_Resume.pdf' | relative_url }}?v=20261114">Download my CV in English (PDF)</a></li>
+</ul>

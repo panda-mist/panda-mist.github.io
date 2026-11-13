@@ -122,18 +122,25 @@ body.folio-site {
 .folio-site .author__content { display: block; padding: 0; width: auto; }
 .folio-site .sidebar .author__name { margin: .8rem 0 .45rem; font: 620 1.19rem/1.4 var(--serif); }
 .folio-site .sidebar .author__bio { font: 400 .82rem/1.62 var(--sans); color: var(--muted); }
-.folio-site .author__urls-wrapper { display: block; position: static; cursor: auto; margin-top: 1rem; }
-.folio-site .author__urls-wrapper button { display: none; }
+.folio-site .author__urls-wrapper { display: block; position: static; min-width: 0; cursor: auto; margin-top: 1rem; }
 .folio-site .author__urls {
   display: block; position: static; z-index: auto; margin: 0; padding: 0; box-shadow: none; border: 0;
 }
 .folio-site .author__urls::before, .folio-site .author__urls::after { display: none; }
-.folio-site .author__urls .author__desktop, .folio-site .author__urls li {
-  white-space: normal; overflow-wrap: break-word; font: 400 .76rem/1.5 var(--sans);
-  margin-bottom: .5rem; color: var(--muted);
+.folio-site .author__urls li {
+  min-width: 0; white-space: normal; overflow-wrap: anywhere; font: 400 .84rem/1.5 var(--sans);
+  margin-bottom: .72rem; color: var(--muted);
 }
 .folio-site .author__urls a { margin: 0; padding: 0; color: var(--green); }
-.folio-site .author__urls i { width: 1.25rem; color: var(--green); }
+.folio-site .author__urls .author-contact {
+  display: grid; grid-template-columns: .95rem minmax(0, 1fr); column-gap: .45rem;
+  align-items: baseline;
+}
+.folio-site .author__urls i { width: .95rem; color: var(--green); }
+.author-affiliation [lang] { display: block; }
+.author-affiliation [lang="zh-CN"] { color: var(--ink); font-weight: 550; }
+.author-affiliation [lang="en"] { margin-top: .08rem; }
+.folio-site .author-email a { white-space: normal; overflow-wrap: anywhere; font: inherit; user-select: text; }
 .folio-site .page__content { line-height: 1.76; }
 .folio-site .page__content h2, .folio-site .archive__subtitle {
   margin: 2.6rem 0 1.15rem; padding: 0 0 .55rem; border-bottom: 1px solid var(--line);
@@ -156,18 +163,21 @@ body.folio-site {
   .folio-site #main:has(> .sidebar) { grid-template-columns: clamp(9.6rem, 15vw, 12.25rem) minmax(0, 1fr); }
   .folio-site #main .sidebar { position: sticky; top: 2rem; align-self: start; }
   .folio-site #main > .sidebar ~ .page__related { grid-column: 2; }
-  .folio-site .sidebar .author__desktop { display: block; }
 }
 @media (max-width: 939px) {
-  .folio-site .sidebar > [itemscope] { display: flex; align-items: center; gap: .8rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
+  .folio-site .sidebar > [itemscope] {
+    display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center;
+    gap: .85rem .75rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line);
+  }
   .folio-site .author__avatar img { width: clamp(2.75rem, 6vw, 3.6rem); height: clamp(2.75rem, 6vw, 3.6rem); }
-  .folio-site .author__avatar { flex: 0 0 auto; }
   .folio-site .sidebar .author__name { margin: 0; font-size: 1rem; }
   .folio-site .sidebar .author__bio { margin: .15rem 0 0; font-size: .74rem; }
-  .folio-site .sidebar .author__urls-wrapper { margin: 0 0 0 auto; }
+  .folio-site .sidebar .author__urls-wrapper { grid-column: 1 / -1; margin: 0; }
+  .folio-site .sidebar .author__urls { display: grid; gap: .6rem 1rem; }
   .folio-site .sidebar .author__urls li { margin: 0; }
-  .folio-site .sidebar .author__urls a { white-space: nowrap; }
-  .folio-site .sidebar .author__desktop { display: none; }
+}
+@media (min-width: 620px) and (max-width: 939px) {
+  .folio-site .sidebar .author__urls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 600px) {
   .folio-site::before { background-position: 48% center; }
