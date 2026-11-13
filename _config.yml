@@ -10,8 +10,8 @@
 locale                   : "en-US"
 title                    : "Panda_Hao Zhang (张昊)"
 title_separator          : "-"
-name                     : &name "Hao Zhang"
-description              : &description "Hao Zhang designs field robots for ecological restoration and agriculture and leads the Mangzhong robotics team."
+name                     : &name "张昊 · Hao Zhang"
+description              : &description "张昊带领芒种团队研发用于生态修复和农业作业的机器人。Hao Zhang leads the Mangzhong team and designs field robots for ecological restoration and agriculture."
 url                      : https://panda-mist.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "panda-mist/panda-mist.github.io"
@@ -22,11 +22,11 @@ repository               : "panda-mist/panda-mist.github.io"
 author:
   # Biographic information
   avatar           : "Panda.png"
-  name             : "Hao Zhang"
+  name             : "张昊 · Hao Zhang"
   pronouns         : # example: "she/her"  
-  bio              : "Field robotics for ecological restoration and agriculture"
-  location         : "Shanghai, China"
-  employer         : "Shanghai Mangzhizhong Technology" 
+  bio              : "生态修复与农业机器人 · Field robotics for ecological restoration and agriculture"
+  location         : "中国上海 · Shanghai, China"
+  employer         : "上海芒智种科技 · Shanghai Mangzhizhong Technology" 
   uri              : # URL
   email            : "2545080736@sjtu.edu.cn" 
 

@@ -1,21 +1,23 @@
 ---
 layout: archive
-title: "Portfolio · 项目介绍"
+title: "项目介绍 · Portfolio"
 permalink: /portfolio/
 author_profile: true
 ---
 
-<h2 class="archive__subtitle">Field robotics · 生态与农业机器人</h2>
-{% assign field_projects = site.portfolio | sort: 'mz_order' %}
-{% for post in field_projects %}
-  {% if post.mz_order %}
-    {% include archive-single.html %}
-  {% endif %}
-{% endfor %}
+<h2 class="archive__subtitle">生态与农业机器人 · Field robotics</h2>
+<div class="mz-project-list">
+  {% assign field_projects = site.portfolio | where_exp: 'project', 'project.mz_order' | sort: 'mz_order' %}
+  {% for project in field_projects %}
+    {% include mz-project-card.html project=project %}
+  {% endfor %}
+</div>
 
-<h2 class="archive__subtitle">Earlier projects and activities · 其他项目与实践</h2>
-{% for post in site.portfolio %}
-  {% unless post.mz_order %}
-    {% include archive-single.html %}
-  {% endunless %}
-{% endfor %}
+<h2 class="archive__subtitle">其他项目与实践 · Earlier projects and activities</h2>
+<div class="mz-project-list">
+  {% for project in site.portfolio %}
+    {% unless project.mz_order %}
+      {% include mz-project-card.html project=project %}
+    {% endunless %}
+  {% endfor %}
+</div>

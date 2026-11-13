@@ -1,0 +1,13 @@
+{% assign item = include.project %}
+<article class="mz-project-card{% unless item.cover %} mz-project-card--text{% endunless %}">
+  {% if item.cover %}
+  <a class="mz-cover" href="{{ item.url | relative_url }}" aria-label="{{ item.title | escape }}">
+    <img src="{{ item.cover | relative_url }}" alt="{{ item.cover_alt | escape }}"{% unless item.mz_order == 1 %} loading="lazy"{% endunless %}>
+  </a>
+  {% endif %}
+  <div>
+    <h3><a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></h3>
+    <p lang="zh-CN">{{ item.excerpt_zh | escape }}</p>
+    <p lang="en">{{ item.excerpt_en | escape }}</p>
+  </div>
+</article>
